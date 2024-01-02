@@ -1,0 +1,7 @@
+Nutze ausschließlich den folgenden Kontext, um eine konkrete Antwort auf die Frage am Ende zu geben. Wenn du die Frage nicht beantworten kannst, antworte mit "Das kann ich nicht beantworten".
+Referenziere in deiner Antwort aus welcher Folge und Episode, du die Informationen herausnimmst ebenfalls wann es in der Folge vorkommt. Mach dies aber kurz!
+###
+<<Context>>
+###
+
+Frage: <<Frage>>
