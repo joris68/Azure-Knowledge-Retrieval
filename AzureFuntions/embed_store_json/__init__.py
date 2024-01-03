@@ -44,13 +44,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
       return func.HttpResponse(str(e) + "\n--\n" + error_traceback, status_code=400)
        
 
-
    #-----------------------------------------------------------------
    # now we are gonna embed the data chunks out of the storage and 
 
-    try:
-
-            
+    try:     
 
       pinecone.init(      
 	    api_key='41fe2d0f-afb6-42e7-adbc-e8b60baf9aed',      
@@ -109,18 +106,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
          #andererseits würden wir den sever überlasten, weil wir zu viele token pro minute schicken
         time.sleep(0.1)
-
-    
     
       json_to_return = {
         "vectors": vectors,
-
         "namespace": "angebissen"
-
       }
       
       logging.info("for loop finished")
-
 
     except Exception as e:
        
@@ -130,10 +122,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Return an HTTP response with the error message and traceback, separated by a line break
       return func.HttpResponse(str(e) + "\n--\n" + error_traceback, status_code=400)
    
-
    # now instead of storing it into a database, we  will use store it into an CSV file in our blob storage
-
-
 
    # now we are gonna write it into our blob storage
     try:

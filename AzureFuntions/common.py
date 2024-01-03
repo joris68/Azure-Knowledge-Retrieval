@@ -12,13 +12,10 @@ import re
 #tokenizer = tiktoken.get_encoding('p50k_base')
 tokenizer = tiktoken.get_encoding('cl100k_base')
 
-
-
 # create the length function
 def tiktoken_len(text):
 
     try:
-
         tokens = tokenizer.encode(
             text,
             disallowed_special=()
@@ -89,9 +86,7 @@ def upload_blob_to_storage(container_path, blob_data, blob_name) :
         logging.info("Blob was successfully uploaded to Blob Storage")
 
     except:
-
         logging.error("Something went wrong with the Blob upload to the Staging Blob-Storage")
-
         raise Exception("Something went wrong with the Blob upload to the Staging Blob-Storage")
 
 
