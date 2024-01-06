@@ -85,7 +85,7 @@ def generate_prompt_input(context, question):
 def search_pinecone(question_embedding, top_k = 5):
 
     pinecone.init(      
-	    api_key='41fe2d0f-afb6-42e7-adbc-e8b60baf9aed',      
+	    api_key='',      
 	    environment='asia-southeast1-gcp-free'      
         )      
     index = pinecone.Index('mypodcastindex')      
